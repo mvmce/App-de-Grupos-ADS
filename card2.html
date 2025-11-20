@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- CONFIGURAÇÕES BÁSICAS -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Grupos de Estudo - Análise e Desenvolvimento de Sistemas</title>
+  
+  <!-- FONTES EXTERNAS -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+  
+  <!-- FRAMEWORK TAILWIND CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  
+  <!-- CONFIGURAÇÃO PERSONALIZADA DO TAILWIND -->
+  <script>
+    tailwind.config = {
+      darkMode: "class", // Habilita modo escuro baseado em classe
+      theme: {
+        extend: {
+          colors: {
+            // PALETA DE CORES PERSONALIZADA
+            primary: "#6366F1", // Cor principal - indigo-500
+            "background-light": "#F3F4F6", // Fundo claro - gray-100
+            "background-dark": "#1F2937", // Fundo escuro - gray-800
+            "surface-light": "#FFFFFF", // Superfície clara - white
+            "surface-dark": "#374151", // Superfície escura - gray-700
+            "text-light": "#111827", // Texto claro - gray-900
+            "text-dark": "#F9FAFB", // Texto escuro - gray-50
+            "text-secondary-light": "#6B7280", // Texto secundário claro - gray-500
+            "text-secondary-dark": "#D1D5DB", // Texto secundário escuro - gray-300
+          },
+          fontFamily: {
+            display: ["Poppins", "sans-serif"], // Fonte principal da aplicação
+          },
+          borderRadius: {
+            DEFAULT: "1rem", // Border-radius padrão para elementos
+          },
+        },
+      },
+    };
+  </script>
+  
+  <!-- ESTILOS GLOBAIS -->
+  <style>
+    /* Otimização de renderização de fontes */
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Garante altura mínima da viewport */
+    body {
+      min-height: max(584px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+  <!-- CONTAINER PRINCIPAL -->
+  <div class="h-screen w-full flex flex-col overflow-hidden fixed">
+    
+    <!-- BACKGROUND GRADIENTE DO HEADER -->
+    <!-- Este elemento cria o gradiente azul-roxo que fica atrás do header -->
+    <div class="absolute inset-x-0 top-0 h-full w-full bg-gradient-to-r from-blue-500 to-purple-900 z-0"></div>
+    
+    <!-- CONTEÚDO PRINCIPAL (sobrepõe o background) -->
+    <div class="relative z-10 flex flex-col h-screen">
+      
+      <!-- HEADER DA PÁGINA -->
+      <header class="flex-shrink-0 pt-8 pb-8 px-6 mb-[-1.00rem] text-center">
+        <h1 class="text-xl font-bold text-white uppercase tracking-wider">
+          Análise e Desenvolvimento de Sistemas
+        </h1>
+      </header>
+      
+      <!-- CONTEÚDO PRINCIPAL - LISTA DE GRUPOS -->
+      <main class="flex-grow flex flex-col bg-surface-light dark:bg-surface-dark rounded-3xl mx-4 mb-[9.70rem] mt-2 overflow-hidden">
+  <div class="flex-grow overflow-y-auto">
+    
+    <!-- TÍTULO FIXO -->
+    <div class="sticky top-0 bg-surface-light dark:bg-surface-dark z-10 px-6 py-3">
+      <h2 class="text-base font-semibold text-primary uppercase">GRUPOS DE ESTUDOS:</h2>
+    </div>
+    
+    <!-- LISTA DE GRUPOS -->
+    <ul class="px-4 pb-4">
+      <!-- ITEM DA LISTA - ALGORITMOS -->
+      <li class="py-3 border-b border-gray-200 dark:border-gray-600">
+        <span class="text-text-light dark:text-text-dark">Algoritmos e Programação</span>
+      </li>
+      
+      <!-- ITEM DA LISTA - ANÁLISE DE SOFTWARE -->
+      <li class="py-3 border-b border-gray-200 dark:border-gray-600">
+        <span class="text-text-light dark:text-text-dark">Análise e Projeto de Software</span>
+      </li>
+      
+      <!-- ITEM DA LISTA - BANCO DE DADOS I -->
+      <li class="py-3 border-b border-gray-200 dark:border-gray-600">
+        <span class="text-text-light dark:text-text-dark">Banco de Dados</span>
+      </li>
+      
+      <!-- ITEM DA LISTA - BANCO DE DADOS II -->
+      <li class="py-3 border-b border-gray-200 dark:border-gray-600">
+        <span class="text-text-light dark:text-text-dark">Banco de Dados II</span>
+      </li>
+      
+      <!-- ITEM DA LISTA - FRONT-END I -->
+      <li class="py-3 border-b border-gray-200 dark:border-gray-600">
+        <span class="text-text-light dark:text-text-dark">Desenvolvimento Front-End I</span>
+      </li>
+      
+      <!-- ITEM DA LISTA - FRONT-END II -->
+      <li class="py-3 border-b border-gray-200 dark:border-gray-600">
+        <span class="text-text-light dark:text-text-dark">Desenvolvimento Front-End II</span>
+      </li>
+      
+      <!-- ITEM DA LISTA - BACK-END I -->
+      <li class="py-3 border-b border-gray-200 dark:border-gray-600">
+        <span class="text-text-light dark:text-text-dark">Desenvolvimento Back-End I</span>
+      </li>
+      
+      <!-- ITEM DA LISTA - BACK-END II -->
+      <li class="py-3 border-b border-gray-200 dark:border-gray-600">
+        <span class="text-text-light dark:text-text-dark">Desenvolvimento Back-End II</span>
+      </li>
+      
+      <!-- ITEM DA LISTA - LOW CODE -->
+      <li class="py-3 border-b border-gray-200 dark:border-gray-600">
+        <span class="text-text-light dark:text-text-dark">Desen. de Software em Low Code</span>
+      </li>
+      
+      <!-- ITEM DA LISTA - MOBILE -->
+      <li class="py-3 border-b border-gray-200 dark:border-gray-600">
+        <span class="text-text-light dark:text-text-dark">Desenvolvimento Mobile</span>
+      </li>
+      
+      <!-- ITEM DA LISTA - EMPREENDEDORISMO -->
+      <li class="py-3 border-b border-gray-200 dark:border-gray-600">
+        <span class="text-text-light dark:text-text-dark">Empreendedorismo e Inovação</span>
+      </li>
+      
+      <!-- ITEM DA LISTA - ESTRUTURAS DE DADOS -->
+      <li class="py-3 border-b border-gray-200 dark:border-gray-600">
+        <span class="text-text-light dark:text-text-dark">Estruturas de Dados</span>
+      </li>
+      
+    </ul>
+  </div>
+</main>
+      
+      <!-- NAVEGAÇÃO INFERIOR (FOOTER NAV) -->
+      <nav class="fixed bottom-4 left-4 right-4 bg-gray-100 dark:bg-gray-800 rounded-3xl border border-gray-200 dark:border-gray-700 z-20">
+        <div class="flex justify-around items-center h-16">
+          
+          <!-- BOTÃO CRIAR GRUPO -->
+          <button class="flex flex-col items-center justify-center w-1/3 text-text-secondary-light dark:text-text-secondary-dark">
+            <span class="material-icons-outlined">groups</span>
+            <span class="text-xs mt-1">Criar Grupo</span>
+          </button>
+          
+          <!-- BOTÃO PROCURAR (ATIVO) -->
+          <button class="flex flex-col items-center justify-center w-1/3 text-primary">
+            <span class="material-icons-outlined">search</span>
+            <span class="text-xs mt-1">Procurar</span>
+          </button>
+          
+          <!-- BOTÃO VOLTAR -->
+          <button class="flex flex-col items-center justify-center w-1/3 text-text-secondary-light dark:text-text-secondary-dark">
+            <span class="material-icons-outlined">arrow_back</span>
+            <span class="text-xs mt-1">Voltar</span>
+          </button>
+          
+        </div>
+      </nav>
+      
+    </div>
+  </div>
+
+  <!-- Script para funcionalidade do botão Voltar -->
+  <script>
+    document.querySelector('button:last-child').addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+  </script>
+
+</body>
+</html>

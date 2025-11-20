@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seleção de Curso</title>
+
+  <!-- Fontes e Ícones -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+
+  <!-- Config Tailwind -->
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#6366F1",
+            "background-light": "#F3F4F6",
+            "background-dark": "#111827",
+          },
+          fontFamily: {
+            display: ["Poppins", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Ajustes adicionais -->
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: max(884px, 100dvh);
+    }
+
+    /* Mantém o comportamento de carrossel com snap */
+    .touch-scroll-snap {
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+    }
+
+    .touch-scroll-snap>div {
+      scroll-snap-align: center;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+
+  <div class="h-screen w-full h-full flex flex-col overflow-hidden fixed">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-500 to-purple-900 shadow-md text-white text-center py-6 px-4">
+      <h1 class="text-xl font-bold tracking-wide">Selecione o curso</h1>
+    </header>
+
+    <!-- Main -->
+    <main class="flex-grow flex flex-col items-center justify py-10 overflow-hidden">
+
+      <!-- Carrossel -->
+      <div id="carousel" class="w-full flex items-center overflow-x-auto px-4 touch-scroll-snap scroll-smooth">
+        
+        <!-- Espaço inicial -->
+        <div class="flex-shrink-0 w-4 md:w-2"></div>
+
+        <!-- CARD 1 -->
+        <div class="flex-shrink-0 w-[85%] max-w-xs bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-2">
+          <div class="p-5 flex flex-col items-center text-center">
+            <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Administração</h2>
+            <img class="w-full h-48 object-cover rounded-md mb-4"
+              src="https://img.freepik.com/free-photo/medium-shot-woman-working-laptop_23-2149300643.jpg"
+              alt="">
+            <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">
+              Organize e aprimore sua visão estratégica!
+            </p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Encontre grupos de estudo voltados para liderança, gestão de pessoas, finanças e empreendedorismo. Conecte-se com colegas, compartilhe ideias e desenvolva habilidades essenciais para o mundo corporativo.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div id="card2" class="flex-shrink-0 w-[85%] max-w-xs bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-2 cursor-pointer">
+          <div class="p-5 flex flex-col items-center text-center">
+            <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Análise e Desenvolvimento de Sistemas</h2>
+            <img class="w-full h-48 object-cover rounded-md mb-4"
+              src="https://images.alphacoders.com/135/1358310.png"
+              alt="">
+            <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">
+              Explore o mundo do desenvolvimento de software!
+            </p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Participe de grupos focados em programação, análise de sistemas e novas tecnologias. 
+              Colabore em projetos e aprimore suas competências técnicas para o mercado de TI.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="flex-shrink-0 w-[85%] max-w-xs bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-2">
+          <div class="p-5 flex flex-col items-center text-center">
+            <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Arquitetura e Urbanismo</h2>
+            <img class="w-full h-48 object-cover rounded-md mb-4"
+              src="https://www.hpp.com/fileadmin/users/redakteur/Projekte/Themen/Smart_Cities/Suzhou_Creek_Waterfront_Innovation_Park_1.jpg"
+              alt="">
+            <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">
+              Descubra o universo da Arquitetura e Urbanismo!
+            </p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Participe de grupos dedicados a projeto arquitetônico, urbanismo, desenho técnico e sustentabilidade. 
+              Colabore com outros estudantes, troque referências e desenvolva suas habilidades para transformar ideias em espaços reais.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="flex-shrink-0 w-[85%] max-w-xs bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-2">
+          <div class="p-5 flex flex-col items-center text-center">
+            <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Biomedicina</h2>
+            <img class="w-full h-48 object-cover rounded-md mb-4"
+              src="https://img.freepik.com/free-photo/research-innovation-items-world-science-day-celebration_23-2151812445.jpg?semt=ais_hybrid&w=740&q=80"
+              alt="">
+            <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">
+              Mergulhe no fascinante mundo das ciências da saúde!
+            </p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Participe de grupos focados em análises laboratoriais, genética, microbiologia e pesquisas biomédicas. 
+              Conecte-se com outros estudantes, compartilhe descobertas e aprimore seus conhecimentos para atuar com excelência na área da saúde.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="flex-shrink-0 w-[85%] max-w-xs bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-2">
+          <div class="p-5 flex flex-col items-center text-center">
+            <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Ciências Contábeis</h2>
+            <img class="w-full h-48 object-cover rounded-md mb-4"
+              src="https://portal.pucrs.br/wp-content/uploads/2025/01/ciencias-contabeis-scaled.jpg"
+              alt="">
+            <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">
+              Aprofunde-se no universo da gestão financeira e da análise estratégica!
+            </p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Participe de grupos dedicados à contabilidade, auditoria, controladoria e legislação fiscal. 
+              Conecte-se com outros estudantes, troque conhecimentos e desenvolva habilidades essenciais para atuar com segurança 
+              e precisão no mundo empresarial.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="flex-shrink-0 w-[85%] max-w-xs bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-2">
+          <div class="p-5 flex flex-col items-center text-center">
+            <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Direito</h2>
+            <img class="w-full h-48 object-cover rounded-md mb-4"
+              src="https://www.univel.br/wp-content/uploads/2024/10/view-3d-justice-scales-1-scaled.jpg"
+              alt="">
+            <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">
+              Aprofunde-se no universo da justiça e do pensamento jurídico!
+            </p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Participe de grupos dedicados ao estudo de legislação, jurisprudência, prática jurídica e preparação para provas e concursos. 
+              Conecte-se com outros estudantes, compartilhe argumentos e fortaleça suas habilidades para atuar com excelência no cenário jurídico.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="flex-shrink-0 w-[85%] max-w-xs bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-2">
+          <div class="p-5 flex flex-col items-center text-center">
+            <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Educação Física</h2>
+            <img class="w-full h-48 object-cover rounded-md mb-4"
+              src="https://dinamic.pt/wp-content/uploads/2021/08/achievement-muscle-gym-man-active.jpg"
+              alt="">
+            <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">
+              Explore o universo do movimento, da saúde e da performance humana!
+            </p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Participe de grupos focados em treinamento físico, anatomia, esportes e qualidade de vida. 
+              Conecte-se com outros estudantes, troque experiências e desenvolva habilidades essenciais para atuar com excelência na área.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 8 -->
+        <div class="flex-shrink-0 w-[85%] max-w-xs bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-2">
+          <div class="p-5 flex flex-col items-center text-center">
+            <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Enfermagem</h2>
+            <img class="w-full h-48 object-cover rounded-md mb-4"
+              src="https://media.istockphoto.com/id/467266798/pt/foto/sorridente-mulher-m%C3%A9dico.webp?s=2048x2048&w=is&k=20&c=1stihATijY3CuSjPJXTEPW_T7LA2wesXqfGpn1nGCD0="
+              alt="">
+            <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">
+              Aprofunde-se no cuidado, na ciência e na prática humanizada da saúde!
+            </p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Participe de grupos dedicados a práticas clínicas, anatomia, primeiros socorros e estudos de casos. 
+              Conecte-se com outros estudantes, troque experiências e fortaleça suas habilidades para atuar com segurança na área da enfermagem.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 9 -->
+        <div class="flex-shrink-0 w-[85%] max-w-xs bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-2">
+          <div class="p-5 flex flex-col items-center text-center">
+            <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Estética e Cosmética</h2>
+            <img class="w-full h-48 object-cover rounded-md mb-4"
+              src="https://ingresse.unibrasil.com.br/wp-content/uploads/2024/05/cosmetica-presencial.png"
+              alt="">
+            <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">
+              Explore o mundo da beleza, do bem-estar e das práticas estéticas avançadas!
+            </p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Participe de grupos voltados a cosmetologia, procedimentos estéticos, skincare e tendências do mercado. 
+              Conecte-se com outros estudantes, compartilhe técnicas e desenvolva habilidades essenciais para atuar com confiança na área.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 10 -->
+        <div class="flex-shrink-0 w-[85%] max-w-xs bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-2">
+          <div class="p-5 flex flex-col items-center text-center">
+            <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Farmácia</h2>
+            <img class="w-full h-48 object-cover rounded-md mb-4"
+              src="https://www.uniftc.edu.br/wp-content/uploads/2022/07/farmacia-scaled-1920x990.jpg"
+              alt="">
+            <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">
+              Aprofunde-se no universo dos medicamentos e das ciências laboratoriais!
+            </p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Participe de grupos focados em farmacologia, análises clínicas, manipulação e estudos sobre substâncias. 
+              Conecte-se com outros estudantes e desenvolva competências essenciais para atuar com segurança na área farmacêutica.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 11 -->
+        <div class="flex-shrink-0 w-[85%] max-w-xs bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-2">
+          <div class="p-5 flex flex-col items-center text-center">
+            <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Fisioterapia</h2>
+            <img class="w-full h-48 object-cover rounded-md mb-4"
+              src="https://unilavras.edu.br/new_site/wp-content/uploads/2017/08/fisioterapia-1.png"
+              alt="">
+            <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">
+              Aprofunde-se no universo da reabilitação e do movimento humano!
+            </p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Participe de grupos dedicados a anatomia, biomecânica, técnicas terapêuticas e estudos clínicos. 
+              Conecte-se com outros estudantes, troque experiências e desenvolva habilidades essenciais 
+              para atuar com excelência na área da fisioterapia.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 12 -->
+        <div class="flex-shrink-0 w-[85%] max-w-xs bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-2">
+          <div class="p-5 flex flex-col items-center text-center">
+            <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Medicina Veterinária</h2>
+            <img class="w-full h-48 object-cover rounded-md mb-4"
+              src="https://unilavras.edu.br/new_site/wp-content/uploads/2025/05/bannerzinho.jpg"
+              alt="">
+            <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">
+              Explore o cuidado e a saúde no mundo dos animais!
+            </p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Participe de grupos dedicados à clínica veterinária, anatomia animal, zootecnia e práticas laboratoriais. 
+              Conecte-se com outros estudantes, troque experiências e desenvolva competências essenciais para atuar com 
+              responsabilidade e excelência na área.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 13 -->
+        <div class="flex-shrink-0 w-[85%] max-w-xs bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-2">
+          <div class="p-5 flex flex-col items-center text-center">
+            <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Odontologia</h2>
+            <img class="w-full h-48 object-cover rounded-md mb-4"
+              src="https://www.florence.edu.br/blog/wp-content/uploads/2021/02/Florence-Odontologia.jpg"
+              alt="">
+            <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">
+              Aprofunde-se no cuidado, na saúde bucal e nas práticas clínicas!
+            </p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Participe de grupos focados em anatomia dental, procedimentos clínicos, radiologia e técnicas de atendimento. 
+              Conecte-se com outros estudantes, troque experiências e desenvolva habilidades essenciais para atuar com segurança 
+              e excelência na odontologia.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 14 -->
+        <div class="flex-shrink-0 w-[85%] max-w-xs bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden mx-2">
+          <div class="p-5 flex flex-col items-center text-center">
+            <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">Psicologia</h2>
+            <img class="w-full h-48 object-cover rounded-md mb-4"
+              src="https://blog.portalpos.com.br/wp-content/uploads/2023/02/psicologia-especializar.jpg"
+              alt="">
+            <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">
+              Explore o comportamento humano, a mente e as relações que nos moldam!
+            </p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Participe de grupos dedicados a teorias psicológicas, prática clínica, pesquisa e desenvolvimento pessoal. 
+              Conecte-se com outros estudantes, compartilhe reflexões e desenvolva habilidades essenciais para atuar com responsabilidade 
+              e sensibilidade na área da psicologia.
+            </p>
+          </div>
+        </div>
+
+        <!-- Espaço final -->
+        <div class="flex-shrink-0 w-4 md:w-8"></div>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-700 z-10">
+      <div class="w-full px-6 py-2 flex justify-between items-center max-w-md mx-auto">
+
+        <!-- Botão Anterior -->
+        <button id="btnAnterior"
+          class="bg-blue-500 hover:bg-blue-500 active:bg-purple-900 text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center transition-colors">
+          <span class="material-icons-outlined mr-2">arrow_back</span>
+          Anterior
+        </button>
+
+        <!-- Botão Próximo -->
+        <button id="btnProximo"
+          class="bg-blue-500 hover:bg-blue-500 active:bg-purple-900 text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center transition-colors">
+          Próximo
+          <span class="material-icons-outlined ml-2">arrow_forward</span>
+        </button>
+
+      </div>
+    </footer>
+  </div>
+
+  <!-- SCRIPT DO CARROSSEL -->
+  <script>
+    const carousel = document.getElementById("carousel");
+    const cards = carousel.querySelectorAll(".flex-shrink-0");
+    const btnNext = document.getElementById("btnProximo");
+    const btnPrev = document.getElementById("btnAnterior");
+
+    // índice do slide atual
+    let index = 0;
+
+    // tamanho de um card (largura + margem)
+    function cardWidth() {
+      const card = cards[1]; // primeiro card real (ignora margem inicial)
+      return card.offsetWidth + 16; // 16px = mx-2 do Tailwind
+    }
+
+    // Move o carrossel até o card desejado
+    function moverPara(indice) {
+      const pos = indice * cardWidth();
+      carousel.scrollTo({ left: pos, behavior: "smooth" });
+    }
+
+    // Botão "Próximo"
+    btnNext.addEventListener("click", () => {
+      if (index < cards.length - 3) index++;
+      moverPara(index);
+    });
+
+    // Botão "Anterior"
+    btnPrev.addEventListener("click", () => {
+      if (index > 0) index--;
+      moverPara(index);
+    });
+
+    // Função para clicar no card 2
+    document.getElementById("card2").addEventListener("click", () => {
+      window.location.href = "card2.html";
+    });
+  </script>
+
+</body>
+
+</html>
