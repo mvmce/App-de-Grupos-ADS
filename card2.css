@@ -318,13 +318,14 @@ body {
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 26px; /* Aumentado de 20px para 25px */
 }
 
 .form-label {
   display: block;
   font-weight: 600;
   color: #333;
+  margin-top: -0.5pc;
   margin-bottom: 8px;
   font-size: 14px;
 }
@@ -379,6 +380,10 @@ body {
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
+.form-textarea::placeholder {
+  color: #9ca3af; /* corrige apenas a cor do placeholder do textarea */
+}
+
 .divider {
   height: 1px;
   background: #e5e7eb;
@@ -402,7 +407,7 @@ body {
   padding: 20px;
   border-top: 1px solid #e5e7eb;
   display: flex;
-  gap: 12px;
+  gap: 30px;
   justify-content: center;
 }
 
