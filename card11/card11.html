@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grupos de Estudo - Fisioterapia</title>
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="card11.css">
+</head>
+
+<body>
+
+  <!-- CONTAINER PRINCIPAL -->
+  <div class="container">
+
+    <!-- BACKGROUND GRADIENTE -->
+    <div class="header-bg"></div>
+
+    <!-- CONTEÚDO -->
+    <div class="content">
+
+      <!-- HEADER -->
+      <header class="page-header">
+        <h1>Fisioterapia</h1>
+      </header>
+
+      <!-- MAIN -->
+      <main class="main-box">
+
+        <div class="sticky-title">
+          <h2>GRUPOS DE ESTUDOS:</h2>
+        </div>
+
+        <!-- ÁREA DE BUSCA (NOVA) -->
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Procurar grupo...">
+          <span class="material-icons-outlined search-icon">search</span>
+        </div>
+
+        <!-- CONTAINER COM ROLAGEM -->
+        <div class="group-list-container">
+          <ul class="group-list">
+            <li>Grupo Fictício 1</li>
+            <li>Grupo Fictício 2</li>
+            <li>Grupo Fictício 3</li>
+          </ul>
+        </div>
+
+      </main>
+
+      <!-- FOOTER -->
+      <nav class="footer-nav">
+        <button class="nav-btn">
+          <span class="material-icons-outlined">groups</span>
+          <span class="nav-label">Criar Grupo</span>
+        </button>
+
+        <button class="nav-btn">
+          <span class="material-icons-outlined">search</span>
+          <span class="nav-label">Procurar</span>
+        </button>
+
+        <button id="btnVoltar" class="nav-btn">
+          <span class="material-icons-outlined">arrow_back</span>
+          <span class="nav-label">Voltar</span>
+        </button>
+      </nav>
+
+    </div>
+  </div>
+
+  <script src="card11.js"></script>
+
+
+    <!-- MODAL CRIAR GRUPO -->
+  <div id="modalCriarGrupo" class="modal">
+    <div class="modal-content">
+      <!-- Formulário (sem cabeçalho) -->
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Nome:</label>
+          <input id="inputNome" type="text" class="form-input" placeholder="Digite o nome do grupo aqui" required>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="form-group">
+          <label class="form-label">Descrição:</label>
+          <textarea id="inputDescricao" class="form-textarea" placeholder="Digite a descrição do grupo aqui" rows="3" required></textarea>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="form-group">
+          <label class="form-label">Criado por:</label>
+          <input id="inputCriadoPor" type="text" class="form-input" placeholder="Digite o nome do administrador" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Link de acesso:</label>
+          <input id="inputLink" type="url" class="form-input" placeholder="Cole aqui o link de acesso do grupo (WhatsApp)" required>
+          <span class="form-hint">Cole o link do grupo do WhatsApp</span>
+        </div>
+      </div>
+
+      <!-- Rodapé com botões -->
+      <div class="modal-footer">
+        <button id="btnCriarGrupoModal" class="btn btn-primary">
+          <span class="material-icons-outlined">add</span>
+          Criar grupo
+        </button>
+        <button class="btn btn-secondary" id="btnCancelar">
+          <span class="material-icons-outlined">close</span>
+          Cancelar
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

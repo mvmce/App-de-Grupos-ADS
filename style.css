@@ -63,7 +63,7 @@ body {
 .carousel::-webkit-scrollbar { display: none; }
 
 /* espaço nas extremidades */
-.space { width: 16px; flex: 0 0 16px; }
+.space { width: 8px; flex: 0 0 px; }
 
 /* Card */
 .card {
@@ -75,6 +75,23 @@ body {
   overflow: hidden;
   scroll-snap-align: center;
   margin: 0 6px;
+}
+
+/* Remove sublinhado somente para links que são cards (sem mudar display) */
+a.card-link {
+  text-decoration: none !important;
+  /* NÃO definir color aqui para não sobrescrever as cores internas do card */
+}
+
+/* Garantir que os elementos internos também não exibam sublinhado,
+   mas sem tocar na cor definida pelas regras do card */
+a.card-link h2,
+a.card-link p,
+a.card-link .subtitle,
+a.card-link span,
+a.card-link img {
+  text-decoration: none !important;
+  /* manter color herdada das regras do .card / .card h2 / .card p */
 }
 
 .card-link { cursor: pointer; }
@@ -148,7 +165,7 @@ body {
   color: #fff;
   border: none;
   padding: 12px 16px;
-  border-radius: 9px;
+  border-radius: 25px;
   font-weight: 600;
   font-size: 16px;
   display: inline-flex;

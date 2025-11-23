@@ -1,14 +1,22 @@
-// script.js - comportamento do carrossel (versão corrigida)
+// script.js - comportamento do carrossel (versão melhorada sem mexer na lógica existente)
 // Usa scrollIntoView para centralizar cada card de forma robusta.
-
 const carousel = document.getElementById("carousel");
-const cards = Array.from(carousel.querySelectorAll(".card"));
+if (!carousel) throw new Error('Elemento #carousel não encontrado.');
+
+let cards;
+try {
+  // seleciona apenas filhos diretos com a classe .card para evitar duplicações
+  cards = Array.from(carousel.querySelectorAll(':scope > .card'));
+} catch (e) {
+  // fallback para navegadores que não suportam :scope
+  cards = Array.from(carousel.children).filter(c => c.classList && c.classList.contains('card'));
+}
+
 const btnNext = document.getElementById("btnProximo");
 const btnPrev = document.getElementById("btnAnterior");
 
 let index = 0;
 
-// Centraliza o card com scrollIntoView (mais confiável que cálculos manuais)
 function moverPara(indice) {
   if (!cards[indice]) return;
   cards[indice].scrollIntoView({
@@ -18,32 +26,29 @@ function moverPara(indice) {
   });
 }
 
-// Próximo
-btnNext.addEventListener("click", () => {
-  if (index < cards.length - 1) {
-    index++;
-    moverPara(index);
-  } else {
-    // opcional: rebobinar para o início
-    // index = 0; moverPara(index);
-  }
-});
+if (btnNext) {
+  btnNext.addEventListener("click", () => {
+    if (index < cards.length - 1) {
+      index++;
+      moverPara(index);
+    }
+  });
+}
 
-// Anterior
-btnPrev.addEventListener("click", () => {
-  if (index > 0) {
-    index--;
-    moverPara(index);
-  }
-});
+if (btnPrev) {
+  btnPrev.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      moverPara(index);
+    }
+  });
+}
 
-// Também atualiza índice se o usuário scrollar manualmente (útil para manter botões consistentes)
+// Atualiza índice se o usuário scrollar manualmente
 let scrollTimeout = null;
 carousel.addEventListener("scroll", () => {
-  // debounce rápido para evitar execuções contínuas
   if (scrollTimeout) clearTimeout(scrollTimeout);
   scrollTimeout = setTimeout(() => {
-    // encontra o card mais próximo do centro do carousel
     const carouselRect = carousel.getBoundingClientRect();
     const centerX = carouselRect.left + carouselRect.width / 2;
 
@@ -63,10 +68,19 @@ carousel.addEventListener("scroll", () => {
   }, 80);
 });
 
-// Clique no card 2 → abrir outra página (se existir)
-const card2 = document.getElementById("card2");
-if (card2) {
-  card2.addEventListener("click", () => {
-    window.location.href = "card2.html";
-  });
+
+// ============================================================
+//  HANDLERS DE CLIQUE - MELHORIA SEM ALTERAR A LÓGICA
+// ============================================================
+
+// Gera automaticamente card1 → card14
+for (let i = 1; i <= 14; i++) {
+  const id = `card${i}`;
+  const card = document.getElementById(id);
+
+  if (card) {
+    card.addEventListener("click", () => {
+      window.location.href = `${id}/${id}.html`;
+    });
+  }
 }
