@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Grupos de Estudo - Direito</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupos de Estudo - Ciências Contábeis</title>
 
   <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <link rel="icon" href="logoSite.png">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="card6.css">
+  <link rel="stylesheet" href="cards.css">
 </head>
 
 <body>
@@ -26,7 +28,7 @@
 
       <!-- HEADER -->
       <header class="page-header">
-        <h1>Direito</h1>
+        <h1>Ciências Contábeis</h1>
       </header>
 
       <!-- MAIN -->
@@ -45,9 +47,25 @@
         <!-- CONTAINER COM ROLAGEM -->
         <div class="group-list-container">
           <ul class="group-list">
-            <li>Grupo Fictício 1</li>
-            <li>Grupo Fictício 2</li>
-            <li>Grupo Fictício 3</li>
+            <li>Introdução à Contabilidade</li>
+            <li>Contabilidade Geral</li>
+            <li>Contabilidade Intermediária</li>
+            <li>Contabilidade Avançada</li>
+            <li>Contabilidade de Custos</li>
+            <li>Contabilidade Pública</li>
+            <li>Contabilidade Gerencial</li>
+            <li>Análise das Demonstrações Contábeis</li>
+            <li>Auditoria Contábil</li>
+            <li>Perícia Contábil</li>
+            <li>Controladoria</li>
+            <li>Matemática Financeira</li>
+            <li>Finanças Corporativas</li>
+            <li>Direito Empresarial</li>
+            <li>Direito Tributário</li>
+            <li>Legislação Societária</li>
+            <li>Economia e Mercado</li>
+            <li>Gestão de Custos</li>
+            <li>Sistemas de Informação Contábil</li>
           </ul>
         </div>
 
@@ -74,10 +92,8 @@
     </div>
   </div>
 
-  <script src="card6.js"></script>
 
-
-    <!-- MODAL CRIAR GRUPO -->
+  <!-- MODAL CRIAR GRUPO -->
   <div id="modalCriarGrupo" class="modal">
     <div class="modal-content">
       <!-- Formulário (sem cabeçalho) -->
@@ -91,19 +107,22 @@
 
         <div class="form-group">
           <label class="form-label">Descrição:</label>
-          <textarea id="inputDescricao" class="form-textarea" placeholder="Digite a descrição do grupo aqui" rows="3" required></textarea>
+          <textarea id="inputDescricao" class="form-textarea" placeholder="Digite a descrição do grupo aqui" rows="3"
+            required></textarea>
         </div>
 
         <div class="divider"></div>
 
         <div class="form-group">
           <label class="form-label">Criado por:</label>
-          <input id="inputCriadoPor" type="text" class="form-input" placeholder="Digite o nome do administrador" required>
+          <input id="inputCriadoPor" type="text" class="form-input" placeholder="Digite o nome do administrador"
+            required>
         </div>
 
         <div class="form-group">
           <label class="form-label">Link de acesso:</label>
-          <input id="inputLink" type="url" class="form-input" placeholder="Cole aqui o link de acesso do grupo (WhatsApp)" required>
+          <input id="inputLink" type="url" class="form-input"
+            placeholder="Cole aqui o link de acesso do grupo (WhatsApp)" required>
           <span class="form-hint">Cole o link do grupo do WhatsApp</span>
         </div>
       </div>
@@ -121,6 +140,7 @@
       </div>
     </div>
   </div>
-
+  <script src="cardScript.js"></script>
 </body>
+
 </html>

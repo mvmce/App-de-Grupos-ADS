@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Grupos de Estudo - Análise e Desenvolvimento de Sistemas</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupos de Estudo - Arquitetura e Urbanismo</title>
 
   <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <link rel="icon" href="logoSite.png">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="card2.css">
+  <link rel="stylesheet" href="cards.css">
 </head>
 
 <body>
@@ -26,7 +28,7 @@
 
       <!-- HEADER -->
       <header class="page-header">
-        <h1>Análise e Desenvolvimento de Sistemas</h1>
+        <h1>Arquitetura e Urbanismo</h1>
       </header>
 
       <!-- MAIN -->
@@ -45,18 +47,23 @@
         <!-- CONTAINER COM ROLAGEM -->
         <div class="group-list-container">
           <ul class="group-list">
-            <li>Algoritmos e Programação</li>
-            <li>Análise e Projeto de Software</li>
-            <li>Banco de Dados</li>
-            <li>Banco de Dados II</li>
-            <li>Desenvolvimento Front-End I</li>
-            <li>Desenvolvimento Front-End II</li>
-            <li>Desenvolvimento Back-End I</li>
-            <li>Desenvolvimento Back-End II</li>
-            <li>Desen. de Software em Low Code</li>
-            <li>Desenvolvimento Mobile</li>
-            <li>Empreendedorismo e Inovação</li>
-            <li>Estruturas de Dados</li>
+            <li>Introdução à Arquitetura e Urbanismo</li>
+            <li>Desenho Arquitetônico</li>
+            <li>Desenho Técnico</li>
+            <li>História da Arquitetura e Urbanismo</li>
+            <li>Teoria da Arquitetura</li>
+            <li>Plástica e Composição</li>
+            <li>Projeto Arquitetônico I</li>
+            <li>Projeto Arquitetônico II</li>
+            <li>Projeto Urbano</li>
+            <li>Conforto Ambiental</li>
+            <li>Instalações Prediais</li>
+            <li>Mecânica das Estruturas</li>
+            <li>Materiais de Construção</li>
+            <li>Tecnologia da Construção</li>
+            <li>Paisagismo</li>
+            <li>Topografia</li>
+            <li>Urbanismo e Planejamento Urbano</li>
           </ul>
         </div>
 
@@ -83,10 +90,7 @@
     </div>
   </div>
 
-  <script src="card2.js"></script>
-
-
-    <!-- MODAL CRIAR GRUPO -->
+  <!-- MODAL CRIAR GRUPO -->
   <div id="modalCriarGrupo" class="modal">
     <div class="modal-content">
       <!-- Formulário (sem cabeçalho) -->
@@ -100,19 +104,22 @@
 
         <div class="form-group">
           <label class="form-label">Descrição:</label>
-          <textarea id="inputDescricao" class="form-textarea" placeholder="Digite a descrição do grupo aqui" rows="3" required></textarea>
+          <textarea id="inputDescricao" class="form-textarea" placeholder="Digite a descrição do grupo aqui" rows="3"
+            required></textarea>
         </div>
 
         <div class="divider"></div>
 
         <div class="form-group">
           <label class="form-label">Criado por:</label>
-          <input id="inputCriadoPor" type="text" class="form-input" placeholder="Digite o nome do administrador" required>
+          <input id="inputCriadoPor" type="text" class="form-input" placeholder="Digite o nome do administrador"
+            required>
         </div>
 
         <div class="form-group">
           <label class="form-label">Link de acesso:</label>
-          <input id="inputLink" type="url" class="form-input" placeholder="Cole aqui o link de acesso do grupo (WhatsApp)" required>
+          <input id="inputLink" type="url" class="form-input"
+            placeholder="Cole aqui o link de acesso do grupo (WhatsApp)" required>
           <span class="form-hint">Cole o link do grupo do WhatsApp</span>
         </div>
       </div>
@@ -130,6 +137,7 @@
       </div>
     </div>
   </div>
-
+  <script src="cardScript.js"></script>
 </body>
+
 </html>

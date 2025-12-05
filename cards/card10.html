@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Grupos de Estudo - Arquitetura e Urbanismo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupos de Estudo - Farmácia</title>
 
   <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <link rel="icon" href="logoSite.png">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="card3.css">
+  <link rel="stylesheet" href="cards.css">
 </head>
 
 <body>
@@ -26,7 +28,7 @@
 
       <!-- HEADER -->
       <header class="page-header">
-        <h1>Arquitetura e Urbanismo</h1>
+        <h1>Farmácia</h1>
       </header>
 
       <!-- MAIN -->
@@ -45,9 +47,27 @@
         <!-- CONTAINER COM ROLAGEM -->
         <div class="group-list-container">
           <ul class="group-list">
-            <li>Grupo Fictício 1</li>
-            <li>Grupo Fictício 2</li>
-            <li>Grupo Fictício 3</li>
+            <li>Anatomia Humana</li>
+            <li>Fisiologia Humana</li>
+            <li>Bioquímica</li>
+            <li>Biologia Celular e Molecular</li>
+            <li>Química Geral</li>
+            <li>Química Orgânica</li>
+            <li>Química Analítica</li>
+            <li>Microbiologia</li>
+            <li>Imunologia</li>
+            <li>Farmacologia</li>
+            <li>Farmacologia II</li>
+            <li>Farmacotécnica</li>
+            <li>Farmacocinética</li>
+            <li>Patologia Geral</li>
+            <li>Parasitologia</li>
+            <li>Genética</li>
+            <li>Toxicologia</li>
+            <li>Assistência Farmacêutica</li>
+            <li>Análises Clínicas</li>
+            <li>Bromatologia</li>
+            <li>Gestão em Serviços de Saúde</li>
           </ul>
         </div>
 
@@ -74,10 +94,9 @@
     </div>
   </div>
 
-  <script src="card3.js"></script>
 
 
-    <!-- MODAL CRIAR GRUPO -->
+  <!-- MODAL CRIAR GRUPO -->
   <div id="modalCriarGrupo" class="modal">
     <div class="modal-content">
       <!-- Formulário (sem cabeçalho) -->
@@ -91,19 +110,22 @@
 
         <div class="form-group">
           <label class="form-label">Descrição:</label>
-          <textarea id="inputDescricao" class="form-textarea" placeholder="Digite a descrição do grupo aqui" rows="3" required></textarea>
+          <textarea id="inputDescricao" class="form-textarea" placeholder="Digite a descrição do grupo aqui" rows="3"
+            required></textarea>
         </div>
 
         <div class="divider"></div>
 
         <div class="form-group">
           <label class="form-label">Criado por:</label>
-          <input id="inputCriadoPor" type="text" class="form-input" placeholder="Digite o nome do administrador" required>
+          <input id="inputCriadoPor" type="text" class="form-input" placeholder="Digite o nome do administrador"
+            required>
         </div>
 
         <div class="form-group">
           <label class="form-label">Link de acesso:</label>
-          <input id="inputLink" type="url" class="form-input" placeholder="Cole aqui o link de acesso do grupo (WhatsApp)" required>
+          <input id="inputLink" type="url" class="form-input"
+            placeholder="Cole aqui o link de acesso do grupo (WhatsApp)" required>
           <span class="form-hint">Cole o link do grupo do WhatsApp</span>
         </div>
       </div>
@@ -121,6 +143,7 @@
       </div>
     </div>
   </div>
-
+  <script src="cardScript.js"></script>
 </body>
+
 </html>

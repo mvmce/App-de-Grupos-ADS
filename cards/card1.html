@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Grupos de Estudo - Enfermagem</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupos de Estudo - Administração</title>
 
   <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <link rel="icon" href="logoSite.png">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="card8.css">
+  <link rel="stylesheet" href="cards.css">
 </head>
 
 <body>
@@ -26,7 +28,7 @@
 
       <!-- HEADER -->
       <header class="page-header">
-        <h1>Enfermagem</h1>
+        <h1>Administração</h1>
       </header>
 
       <!-- MAIN -->
@@ -45,9 +47,22 @@
         <!-- CONTAINER COM ROLAGEM -->
         <div class="group-list-container">
           <ul class="group-list">
-            <li>Grupo Fictício 1</li>
-            <li>Grupo Fictício 2</li>
-            <li>Grupo Fictício 3</li>
+            <li>Introdução à Administração</li>
+            <li>Teoria Geral da Administração (TGA)</li>
+            <li>Comportamento Organizacional</li>
+            <li>Fundamentos de Marketing</li>
+            <li>Gestão de Pessoas</li>
+            <li>Administração Financeira</li>
+            <li>Administração de Materiais</li>
+            <li>Administração da Produção</li>
+            <li>Administração Estratégica</li>
+            <li>Gestão de Projetos</li>
+            <li>Mercadologia</li>
+            <li>Empreendedorismo</li>
+            <li>Contabilidade Geral</li>
+            <li>Contabilidade de Custos</li>
+            <li>Matemática Financeira</li>
+            <li>Economia Aplicada</li>
           </ul>
         </div>
 
@@ -74,10 +89,7 @@
     </div>
   </div>
 
-  <script src="card8.js"></script>
-
-
-    <!-- MODAL CRIAR GRUPO -->
+  <!-- MODAL CRIAR GRUPO -->
   <div id="modalCriarGrupo" class="modal">
     <div class="modal-content">
       <!-- Formulário (sem cabeçalho) -->
@@ -91,19 +103,22 @@
 
         <div class="form-group">
           <label class="form-label">Descrição:</label>
-          <textarea id="inputDescricao" class="form-textarea" placeholder="Digite a descrição do grupo aqui" rows="3" required></textarea>
+          <textarea id="inputDescricao" class="form-textarea" placeholder="Digite a descrição do grupo aqui" rows="3"
+            required></textarea>
         </div>
 
         <div class="divider"></div>
 
         <div class="form-group">
           <label class="form-label">Criado por:</label>
-          <input id="inputCriadoPor" type="text" class="form-input" placeholder="Digite o nome do administrador" required>
+          <input id="inputCriadoPor" type="text" class="form-input" placeholder="Digite o nome do administrador"
+            required>
         </div>
 
         <div class="form-group">
           <label class="form-label">Link de acesso:</label>
-          <input id="inputLink" type="url" class="form-input" placeholder="Cole aqui o link de acesso do grupo (WhatsApp)" required>
+          <input id="inputLink" type="url" class="form-input"
+            placeholder="Cole aqui o link de acesso do grupo (WhatsApp)" required>
           <span class="form-hint">Cole o link do grupo do WhatsApp</span>
         </div>
       </div>
@@ -121,6 +136,7 @@
       </div>
     </div>
   </div>
-
+  <script src="cardScript.js"></script>
 </body>
+
 </html>
