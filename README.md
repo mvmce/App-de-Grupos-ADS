@@ -25,7 +25,7 @@ https://www.figma.com
 ## 🔧 Acesso ao Projeto
 
 1️⃣ **Acesse o link do protótipo**  
-*(insira aqui o link do Figma quando disponível)*
+https://www.figma.com/design/RKMfcCd4eXTisDMRmFrWwm/Grupos-de-Estudos---Manuel-Victor-Monteiro?node-id=0-1&t=HeUGgD31UvbwCguD-1
 
 2️⃣ Abra no **Figma** (modo editor) ou clique em **Play ▶ Prototype** para testar a navegação.
 
@@ -87,11 +87,7 @@ Contraste, leitura, navegação e refinamentos.
 ├── 04 - Telas em Alta Fidelidade
 └── 05 - Protótipo Navegável
 
-yaml
-Copiar código
-
 ---
-
 ## 🖼️ Recursos Utilizados
 
 - UI Kits da **Figma Community**  
